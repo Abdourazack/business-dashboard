@@ -20,6 +20,10 @@ router.get('/stats', getStats)
 router.get('/:id', getServer)
 
 // Simuler le changement de statut d'un serveur
-router.patch('/:id/status', changeServerStatus)
+
+if (process.env.NODE_ENV !== 'production') {
+  router.patch('/:id/status', changeServerStatus)
+}
+
 
 export default router
