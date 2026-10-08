@@ -1,9 +1,14 @@
+
 <script setup lang="ts">
-import HomePage from "./pages/HomePage.vue"
+import { RouterView } from 'vue-router'
+import MainNavigation from './components/MainNavigation.vue'
 </script>
 
 <template>
-  <HomePage />
+  <div class="app-layout">
+    <MainNavigation />
+    <RouterView />
+  </div>
 </template>
 
 <style>
@@ -13,7 +18,8 @@ import HomePage from "./pages/HomePage.vue"
 
 body {
   margin: 0;
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: Inter, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: #0f172a;
   color: #f8fafc;
 }
@@ -21,5 +27,9 @@ body {
 button,
 input {
   font-family: inherit;
+}
+
+.app-layout {
+  min-height: 100vh;
 }
 </style>

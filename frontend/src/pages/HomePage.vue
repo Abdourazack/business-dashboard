@@ -45,6 +45,7 @@ function searchExample(value: string) {
 </script>
 
 <template>
+  
   <main class="home-page">
     <section class="hero">
       <span class="eyebrow">Démo portfolio</span>
@@ -256,6 +257,7 @@ function searchExample(value: string) {
 </template>
 
 <style scoped>
+
 .home-page {
   min-height: 100vh;
   padding: 56px 24px 90px;

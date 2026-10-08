@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import productRoutes from "./routes/product.routes";
+import monitoringRoutes from "./routes/monitoring.routes";
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ app.get("/", (_req, res) => {
 });
 
 app.use("/api/products", productRoutes);
+app.use("/api/monitoring", monitoringRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
